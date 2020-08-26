@@ -5,38 +5,9 @@ Crea una classe User che rappresenti quella tabella, e usala per stampare in pag
 
 <?php
 
+// Includo il file contenente il diagramma
 
-  // Creo il database in un formato array contenente i dati di ogni singolo utente
-
-  // Database
-  $users = [
-
-    // Singolo utente
-    [
-      "nome" => "Mario",
-      "cognome" => "Rossi",
-      "id_utente" => "mario_rossi7",
-      "eta" => "20",
-      "regione" => "Piemonte"
-    ],
-    [
-      "nome" => "Luca",
-      "cognome" => "Verdi",
-      "id_utente" => "luca_verdi10",
-      "eta" => "30",
-      "regione" => "Toscana"
-    ],
-    [
-      "nome" => "Nadia",
-      "cognome" => "Lussu",
-      "id_utente" => "nadia_lussu23",
-      "eta" => "25",
-      "regione" => "Sardegna"
-    ],
-
-
-
-  ];
+  include __DIR__ . '/diagramma.php';
 
   // Creo la classe con le relative voci per ogni utente
   class User {
@@ -60,7 +31,10 @@ Crea una classe User che rappresenti quella tabella, e usala per stampare in pag
     $single_user->eta = $user['eta'];
     $single_user->regione = $user['regione'];
 
-    var_dump($single_user);
+    echo 'Nome e cognome: ' . $single_user->nome . ' ' . $single_user->cognome . '<br>';
+    echo 'Id utente: ' . $single_user->id_utente . '<br>';
+    echo 'Eta: ' . $single_user->eta . '<br>';
+    echo'Regione: ' .  $single_user->regione . '<br>' . '<br>';
 
   }
 
